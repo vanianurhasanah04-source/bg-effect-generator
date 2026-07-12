@@ -24,7 +24,7 @@ jobs:
 
       - name: Extract ZIP
         run: |
-          unzip -o ProceduralMotionEngine_Phase5.zip -d ProceduralMotionEngine
+          unzip -o ProceduralMotionEngine.zip -d ProceduralMotionEngine
 
       - name: Remove ZIP
         run: |
