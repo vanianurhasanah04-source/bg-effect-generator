@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Procedural Motion Engine</title>
+<link rel="stylesheet" href="./css/theme.css" />
+<link rel="stylesheet" href="./css/panel.css" />
+</head>
+<body>
+  <div id="app" class="pme-app">
+
+    <header class="pme-header">
+      <div class="pme-header-title">
+        <span class="pme-logo-dot"></span>
+        <span>Procedural Motion Engine</span>
+      </div>
+      <div class="pme-header-actions">
+        <button id="btn-undo" class="pme-icon-btn" title="Undo last change">↶</button>
+        <button id="btn-reset" class="pme-icon-btn" title="Reset all parameters">⟲</button>
+      </div>
+    </header>
+
+    <div class="pme-preview" id="preview-panel">
+      <svg id="preview-svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid meet"></svg>
+      <div class="pme-preview-overlay">
+        <span id="preview-status">No composition yet</span>
+      </div>
+    </div>
+
+    <div class="pme-toolbar">
+      <button id="btn-generate" class="pme-btn pme-btn-primary">✨ One-Click Masterpiece</button>
+      <button id="btn-regenerate" class="pme-btn">Regenerate</button>
+    </div>
+
+    <nav class="pme-tabs" id="engine-tabs"></nav>
+
+    <main class="pme-panel-body" id="panel-body">
+      <!-- Engine control groups are injected here by UIBuilder -->
+    </main>
+
+    <footer class="pme-footer">
+      <button id="btn-presets" class="pme-btn pme-btn-ghost">Presets</button>
+      <button id="btn-send-to-ae" class="pme-btn pme-btn-primary">Build in After Effects</button>
+    </footer>
+  </div>
+
+  <script src="./lib/CSInterface.js"></script>
+  <script src="./js/core/MathUtils.js"></script>
+  <script src="./js/core/MotionMath.js"></script>
+  <script src="./js/core/ParamSchema.js"></script>
+  <script src="./js/core/ParamController.js"></script>
+  <script src="./js/core/EngineRegistry.js"></script>
+  <script src="./js/core/HostBridge.js"></script>
+  <script src="./js/ui/UIBuilder.js"></script>
+  <script src="./js/ui/PreviewRenderer.js"></script>
+  <script src="./js/engines/GeometryEngine.js"></script>
+  <script src="./js/engines/CompositionEngine.js"></script>
+  <script src="./js/engines/ColorEngine.js"></script>
+  <script src="./js/engines/MotionEngine.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest Version="8.0" ExtensionBundleId="com.studio.proceduralmotionengine"
+    ExtensionBundleVersion="1.0.0" ExtensionBundleName="Procedural Motion Engine">
+  <ExtensionList>
+    <Extension Id="com.studio.proceduralmotionengine.panel" Version="1.0.0" />
+  </ExtensionList>
+  <ExecutionEnvironment>
+    <HostList>
+      <Host Name="AEFT" Version="[24.0,99.9]" />
+    </HostList>
+    <LocaleList>
+      <Locale Code="All" />
+    </LocaleList>
+    <RequiredRuntimeList>
+      <RequiredRuntime Name="CSXS" Version="8.0" />
+    </RequiredRuntimeList>
+  </ExecutionEnvironment>
+  <DispatchInfoList>
+    <Extension Id="com.studio.proceduralmotionengine.panel">
+      <DispatchInfo>
+        <Resources>
+          <MainPath>./client/index.html</MainPath>
+          <ScriptPath>./host/main.jsx</ScriptPath>
+          <CEFCommandLine>
+            <Parameter>--enable-nodejs</Parameter>
+            <Parameter>--mixed-context</Parameter>
+          </CEFCommandLine>
+        </Resources>
+        <Lifecycle>
+          <AutoVisible>true</AutoVisible>
+        </Lifecycle>
+        <UI>
+          <Type>Panel</Type>
+          <Menu>Procedural Motion Engine</Menu>
+          <Geometry>
+            <Size>
+              <Height>760</Height>
+              <Width>420</Width>
+            </Size>
+            <MinSize>
+              <Height>600</Height>
+              <Width>380</Width>
+            </MinSize>
+            <MaxSize>
+              <Height>2000</Height>
+              <Width>900</Width>
+            </MaxSize>
+          </Geometry>
+          <Icons>
+            <Icon Type="Normal">./icons/icon_normal.png</Icon>
+            <Icon Type="RollOver">./icons/icon_rollover.png</Icon>
+            <Icon Type="Darkened">./icons/icon_darkened.png</Icon>
+            <Icon Type="Disabled">./icons/icon_disabled.png</Icon>
+          </Icons>
+        </UI>
+      </DispatchInfo>
+    </Extension>
+  </DispatchInfoList>
+</ExtensionManifest>
